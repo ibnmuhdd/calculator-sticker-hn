@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Sticker Label Kalkulator
+  </title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <body>
+   <div class="container">
+    <div style="text-align: center;">
+     <img alt="HN Reka Grafik Logo" src="https://i.imgur.com/UtfiSoX.png" style="max-height: 120px;"/>
+    </div>
+    <h2>
+     Sticker Label Kalkulator
+    </h2>
+    <div class="card">
+     <label for="material">
+      Jenis Material :
+     </label>
+     <select id="material">
+      <option value="mirrorkote">
+       Mirrorkote
+      </option>
+      <option value="whitepp">
+       White PP
+      </option>
+      <option value="transparent">
+       Transparent
+      </option>
+      <option value="pvc">
+       PVC
+      </option>
+     </select>
+     <label for="laminate">
+      Finishing (Laminate) :
+     </label>
+     <select id="laminate">
+      <option value="none">
+       No Laminate
+      </option>
+      <option value="matte">
+       Matte (+RM0.50/sheet)
+      </option>
+      <option value="glossy">
+       Glossy (+RM0.50/sheet)
+      </option>
+     </select>
+     <label for="shape">
+      Jenis Bentuk :
+     </label>
+     <select id="shape">
+      <option value="square">
+       Petak
+      </option>
+      <option value="circle">
+       Bulat
+      </option>
+      <option value="custom">
+       Custom
+      </option>
+     </select>
+     <label for="cutting">
+      Jenis Cutting :
+     </label>
+     <select id="cutting">
+      <option value="kissCut">
+       Kiss Cut (Percuma)
+      </option>
+      <option value="dieCut">
+       Die Cut (+RM1/sheet)
+      </option>
+     </select>
+     <label for="width">
+      Lebar (Width) :
+     </label>
+     <div class="unit-selectors">
+      <input id="width" placeholder="Contoh: 5" step="0.1" type="number"/>
+      <select id="widthUnit">
+       <option value="cm">
+        cm
+       </option>
+       <option value="mm">
+        mm
+       </option>
+       <option value="inch">
+        inch
+       </option>
+      </select>
+     </div>
+     <label for="height">
+      Tinggi (Height) :
+     </label>
+     <div class="unit-selectors">
+      <input id="height" placeholder="Contoh: 5" step="0.1" type="number"/>
+      <select id="heightUnit">
+       <option value="cm">
+        cm
+       </option>
+       <option value="mm">
+        mm
+       </option>
+       <option value="inch">
+        inch
+       </option>
+      </select>
+     </div>
+     <label for="quantity">
+      Kuantiti (pcs):
+     </label>
+     <input id="quantity" placeholder="Contoh: 500" type="number"/>
+     <button onclick="calculateStickerCost()">
+      Kira Harga
+     </button>
+     <div class="result" id="result">
+     </div>
+     <textarea id="whatsappText" placeholder="Maklumat untuk WhatsApp pelanggan akan muncul di sini..." readonly=""></textarea>
+     <div id="stickerPreview">
+     </div>
+    </div>
+    <button onclick="showPreviewGrid()">
+     Preview Grid
+    </button>
+    <div class="modal" id="previewModal">
+     <div class="modal-content">
+      <h3>
+       Preview Grid Sticker (A3)
+      </h3>
+      <div class="grid-container" id="gridContainer">
+      </div>
+      <button class="close-btn" onclick="closePreviewGrid()">
+       Tutup
+      </button>
+     </div>
+    </div>
+    <footer>
+     Dihasilkan Oleh
+     <a href="https://hnrekagrafik.com" target="_blank">
+      HN Reka Grafik
+     </a>
+     | © 2025 Hak Cipta Dipelihara
+    </footer>
+   </div>
+  </body>
+  <script src="script.js">
+  </script>
+ </body>
+</html>
